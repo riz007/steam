@@ -13,6 +13,8 @@ app.controller('rizCtrl', function($scope) {
     	
     	var newItemNo = $scope.choices.length;
         $scope.choices.push({'id':'choice'});
+        
+// $scope.choices.push({'id':''});
 
     
       
