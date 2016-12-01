@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html ng-app="RizApp">
+	<head>
+		<!--[if IE]>
+	      	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	      <![endif]-->
+	    <title> Dynamic Form Fields</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+	</head>
+	
+	<body>
+
+		<div class="container">
+
+			<div class="row">
+
+				<h3> Dynamic Form Fields</h3>
+
+				<hr/>
+
+				<div ng-app="angularjs-starter" ng-controller="MainCtrl">
+				   <fieldset  data-ng-repeat="choice in choices">
+				      <select>
+				         <option>NGSS</option>
+				         <option>CCSS</option>
+				         <option>NGSS+CCSS</option>
+				      </select>
+				      <input type="text" ng-model="choice.name" name="" placeholder="Enter sub choice">
+				      <button class="remove" ng-show="$last" ng-click="removeChoice()">-</button>
+				   </fieldset>
+				   <button class="addfields" ng-click="addNewChoice()">Add fields</button>
+				       
+				 
+				</div>
+				
+			</div>
+
+		</div>
+		
+
+	</body>
+</html>
